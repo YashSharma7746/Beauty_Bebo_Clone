@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        
+        #head{
+            margin-top: -7px;
+            cursor: pointer;
+        }
+        #shop>img{
+            width: 100%;
+            margin: auto;
+            
+        }
+        #google>img{
+            position: absolute;
+            width: 9.3rem;
+            top: 1rem;
+            right: 4rem;
+        }
+        #med-head{
+            width: 85%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 15px;
+        }
+        #med-head>img:nth-child(1){
+            padding: 10px 0px;
+            height: 4rem;
+            width: 20%;
+            margin-right: 2rem;
+        }
+        #searchBar{
+            margin: auto;
+            border: .7px solid grey;
+            padding: 5px 5px;
+        }
+        #brands{
+            width: 13rem;
+            height: 2rem;
+            padding: 5px 8px;
+            border: none;
+            color: grey;
+        }
+        #searchBar>input{
+            padding: 5px 8px;
+            width: 13rem;
+            border: none;
+        }
+        #login-signup{
+            margin-right: 4rem;
+            margin: auto;
+            display: flex;
+            width: 25%;
+            gap: 15px;
+
+        }
+        #login-signup>h4{
+            cursor: pointer;
+        }
+        #login-signup>img{
+            width: 2rem;
+            height: 2rem;
+            border: .2px solid grey;
+            margin-top: 14px;
+            cursor: pointer;
+        }
+        #login-signup>img:hover{
+            background-color: rgb(182, 34, 123);
+        }
+        .fav{
+            width: 2rem;
+            margin: auto;
+            border: 1.5px solid black;
+            margin-left: 9rem;
+            cursor: pointer;
+        }
+        .fav:hover{
+            background-color: rgb(182, 34, 123);
+        }
+        #nav{
+            background-color: rgb(182, 34, 123);
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            position: sticky;
+            top: 0px;
+            float: top;
+            z-index: 100;
+        }
+        #nav>a{
+            display: flex;
+            text-decoration: none;
+            gap: 2rem;
+            width: 100%;
+            margin-left: 6rem;
+        }
+        #cart>img{
+            width: 10%;
+            margin: auto;
+        }
+        
+        #nav>a>button,#cart{
+            background-color: rgb(182, 34, 123);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 1rem;
+        }
+        #cart{
+            width: 20%;
+            margin-right: 3rem;
+        }
+        #nav>a>button:hover,#cart:hover{
+            background-color: rgb(180, 167, 167);
+        }
+        #first{
+            width: 85%;
+            margin: auto;
+            margin-top: 15px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 5px;
+        }
+        #first>div{
+            font-weight: bold;
+            margin-left: 27px;
+        }
+    
+        #first>div:nth-child(1){
+            width: 28%;
+        }
+        #first>div:nth-child(1)>img{
+            width: 1.5rem;
+            margin: auto;
+            position: relative;
+            top: 6px;
+        }
+        .cat{
+            display: flex;
+            gap: .25rem;
+            line-height: 3rem;
+            font-weight: lighter;
+            cursor: pointer;
+        }
+        .cat:nth-child(1){
+            margin-top: .25rem;
+        }
+        .cat>img{
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-top: .75rem;
+            margin-right: .5rem;
+            cursor: pointer;
+        }
+        .cat::after{
+            content: '>';
+            position: absolute;
+            left: 25rem;            
+        }
+        #second{
+            display: flex;
+            justify-content: center;
+            width: 85.5%;
+            margin: auto;
+            margin-top: 1rem;
+        }#second>img{
+            width: 100%;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        #third,#sixth{
+            width: 85%;
+            margin: auto;
+        }
+        #third>h3{
+            text-decoration: underline red ;
+            font-weight: lighter;
+        }
+        #products{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 1rem;
+            padding: 15px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }#products>div{
+            text-align: center;
+            padding-bottom: 1rem;
+            border-right: .2px solid rgb(235, 218, 218);
+        }
+        #products>div:nth-child(4){
+            border-right: 0px solid rgb(208, 201, 201);
+        }
+        
+        #products>div>h4{
+            font-weight: lighter;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        #products>div>h5{
+            display: flex;
+            margin-top: -20px;
+            align-items: center;
+            padding: 0px 25px;
+            font-size: 1.25rem;
+            color: rgb(182, 34, 123);
+            justify-content: space-around;
+        }
+        #products>div>h5>p:nth-child(1){
+            text-decoration: line-through;
+            font-weight: lighter;
+            font-size: 1rem;
+            color: grey;
+            margin-left: 2rem;
+        }
+        #products>div>h5>p:nth-child(2){
+            color: green;
+            font-size: medium;
+        }
+        .fa{
+            color: grey;
+            margin-bottom: 1rem;
+        }
+        .checked{
+            color: orange;
+        }
+        .cart-btn{
+            background-color: rgb(182, 34, 123);
+            color: white;
+            border: none;
+            width: 60%;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 3px 0px;
+            margin-top: -15px;
+            margin-bottom: 9px;
+            padding-bottom: 5px;
+        }
+        
+        .cart-btn>img{
+            width: 1.2rem;
+            position: relative;
+            top: 4px;
+        }
+        #fourth{
+            width: 85%;
+            display: flex;
+            gap: 30px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        #fourth>img{
+            width: 50%;
+        }
+        #fifth{
+            width: 85%;
+            display: flex;
+            margin: auto;
+            justify-content: space-evenly;
+            margin-top: 15px;
+            padding: 8px 25px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        #fifth>div{
+            border-right: .2px solid rgb(235, 218, 218);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 17%;
+        }
+        #fifth>div>img{
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-bottom: -10px;
+        }
+        #fifth>div:hover{
+            background-color: rgb(182, 34, 123);
+            color: white;
+            cursor: pointer;
+        }
+        #fifth>div:nth-child(7){
+            border-right: 0px solid rgb(180, 167, 167);
+        }
+        #seventh,#nine{
+            width: 85%;
+            margin: auto;
+        }
+        #seventh>img,#nine>img{
+            width: 100%;
+            margin-top: 25px;
+        }
+        #eight{
+            display: flex;
+            width: 85%;
+            margin: auto;
+            justify-content: space-between;
+        }
+        #best-seller,#latest-products,#most-viewed{
+            width: 31%;
+        }
+        #best-seller>h3{
+            text-decoration: underline red;
+        }
+        #best-seller>div>div{
+            border-bottom: .5px solid rgb(208, 201, 201);
+        }
+        #best-seller>div:last-child{
+            border-bottom: .5px solid rgb(208, 201, 201);
+        }
+        #best-seller>div{
+            display: flex;
+            margin-top: -.5rem;
+            margin-bottom: 10px;
+            padding: 0px 10px;
+            border-left: .5px solid rgb(208, 201, 201);
+            border-right: .5px solid rgb(208, 201, 201);
+        }
+        #best-seller>div>div>h4{
+            font-weight: lighter;
+        }
+        #best-seller>div>div>img{
+            position: relative;
+            width: 8rem;
+            height: 8rem;
+            margin-right: 1rem;
+            margin-top: 9px;
+        }
+        #best-seller>div>div>h5{
+            margin-top: -10px;
+            font-size: 1rem;
+            color: rgb(182, 34, 123);
+        }
+        #best-seller>div>div>h5>p:first-child{
+            text-decoration: line-through;
+        }
+        #best-seller>div>div>h5>p:last-child{
+            color: green;
+            margin-top: -1rem;
+        }
+        #ten{
+            width: 85%;
+            margin: auto;
+        }
+        #ten>h1{
+            font-weight: lighter;
+            color: rgb(95, 91, 91);
+        }
+        #ten>h4{
+            font-weight: lighter;
+            color: grey;
+        }
+        #ten>h4>span{
+            font-weight: bold;
+        }
+        #ten>h4>p{
+            color: red;
+        }
+        footer{
+            background-color: rgb(55, 50, 50);
+            padding: 1.5rem;
+            margin-top: 25px;
+        }
+        footer>div{
+            width: 80%;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+        }
+        footer>div>div{
+            color: rgb(145, 140, 140);
+        }
+        footer>div>div>h6{
+            margin: 0px 0px;
+            font-size: medium;
+        }
+        footer>div>div>h5:hover{
+            cursor: pointer;
+            color: rgb(182, 34, 123);
+        }
+        footer>div>div>h5{
+            font-size: medium;
+            line-height: .5rem;
+        }
+        footer>div>div>h6:last-child{
+            margin: 9px 0px;
+        }
+        footer>div>div>h3{
+            color: white;
+            
+        }
+        #payment{
+            width: 85%;
+            border-top: 1px solid white;
+            padding: 1rem 0rem;
+        }
+        #payment>div{
+            color: white;
+            font-size: 30;
+        }#payment>div>input{
+            border: none;
+            width: 18rem;
+            padding: 1rem .5rem;
+            font-size: 15;
+            margin-left: 15px;
+        }
+        #payment>div>button{
+            padding: 1rem .5rem;
+            background-color: rgb(182, 34, 123);
+            color: white;
+            border: none;
+            width: 8rem;
+            cursor: pointer;
+            font-size: 15;
+            margin-left: -10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <div id="shop">
+            <img src="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg" alt="">
+        </div>
+        <div id="google">
+            <img src="https://www.beautybebo.com/pub/media/bb-app.png" alt="">
+        </div>
+    </div>
+    <div id="med-head">
+        <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="">
+        <div id="searchBar">
+            <select name="" id="brands">
+                <option value="">All Categories</option>
+                <option value="1">Makeup</option>
+                <option value="2">Skin</option>
+                <option value="3">Hair</option>
+                <option value="4">Personal Care</option>
+                <option value="5">Mom & Baby Care</option>
+                <option value="6">Fragrance</option>
+                <option value="7">Ayurveda</option>
+            </select>
+            <span>|</span>
+            <input type="text" id="search" placeholder="Enter Your Search">
+        </div>
+        <img class="fav" src="https://as1.ftcdn.net/v2/jpg/01/32/75/28/1000_F_132752845_zcKLpNxIQU0Zt6EOUFCIllqpZdaM62Jw.jpg" alt="">
+        <div id="login-signup">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="">
+            <a><h4 id="user"></h4></a>
+        </div>
+    </div>
+    <div id="nav">
+        <a href="./brands.html">
+            <button>MAKEUP</button>
+            <button>SKIN</button>
+            <button>HAIR</button>
+            <button>PERSONAL CARE</button>
+            <button>MOM & BABY CARE</button>
+            <button>FRAGRANCE</button>
+            <button>AYURVEDA</button>
+        </a> 
+        <button id="cart"><img src="https://cdn-icons.flaticon.com/png/512/736/premium/736943.png?token=exp=1658319175~hmac=17e2bba34f20039a74c57d855258dda6" alt=""> My Cart <span>- 0.00</span></button>
+    </div>
+    <div id="first">
+        <div id="all-cat"><img src="https://t4.ftcdn.net/jpg/03/05/87/61/240_F_305876177_4EzB8UJafxNruTRjfLgc57mb07Qn1cNv.jpg" alt=""> ALL CATEGORIES
+            <div class="cat"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/makeup-small.png" alt=""> Makeup </div>
+            <div class="cat"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/skin-small.png" alt=""> Skin </div>
+            <div class="cat"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/hair-small.png" alt=""> Hair </div>
+            <div class="cat"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/personal-care-small.png" alt=""> Personal Care </div>
+            <div class="cat"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/mom-baby-care-small.png" alt=""> Mom & Baby Care </div>
+            <div class="cat"><img src="https://www.beautybebo.com/pub/media/fragrance.png" alt=""> Fragrance </div>
+            <div class="cat"><img src="https://www.beautybebo.com/pub/media/ayurveda.png" alt=""> Ayurveda </div>
+        </div>
+        <div id="slide">
+            <img src="https://www.beautybebo.com/pub/media/mega-menu/slider-3.jpg" alt="">
+        </div>
+    </div>
+    <div id="second">
+        <img src="https://www.beautybebo.com/pub/media/blue_heaven.jpg" alt="">
+    </div>
+    <div id="third">
+        <h3>NEW ARRIVALS!</h3>
+        <div id="products">
+            <div>
+                <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/c/4ca14ce8906087779124_7_.jpg" alt="">
+                <h4>Mamaearth Rice Face Scrub For Glowing Skin With Rice Water &</h4>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <h5><p class="fa fa-rupee">349</p> 304.00 <p>13% Off</p></h5>
+                <button class="cart-btn"><img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+            </div>
+            <div>
+                <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/r/e/repair_shampoo_650-2_1_1.jpg" alt="">
+                <h4>Dove Intense Repair Shampoo</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <h5><p class="fa fa-rupee">500</p> 350.00 <p>30% Off</p></h5>
+                <button class="cart-btn"> <img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+            </div>
+            <div>
+                <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8908003416557_1.png" alt="">
+                <h4>Organic Harvest Cleansing Milk With Essential Oils</h4>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <h5><p class="fa fa-rupee">545</p> 491.00 <p>10% Off</p></h5>
+                <button class="cart-btn"><img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+            </div>
+            <div>
+                <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/i/m/image1_600x.jpg" alt="">
+                <h4>Lotus Herbals Whiteglow Vitamin C Radiance Cream Spf 20</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <h5><p class="fa fa-rupee"> 475</p> 428.00 <p>10% Off</p></h5>
+                <button class="cart-btn"><img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div id="fourth">
+        <img src="https://www.beautybebo.com/pub/media/mega-menu/beeone.jpg" alt="">
+        <img src="https://www.beautybebo.com/pub/media/mega-menu/lotus.jpg" alt="">
+    </div>
+    <div id="fifth">
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/catalog/category/makeup_1.png" alt="">
+            <p>Makeup</p>
+        </div>
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/catalog/category/skin.png" alt="">
+            <p>Skin</p>
+        </div>
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/catalog/category/hair.png" alt="">
+            <p>Hair</p>
+        </div>
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/catalog/category/personal-care.png" alt="">
+            <p>Personal  Care</p>
+        </div>
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/catalog/category/mom-baby-care.png" alt="">
+            <p>Mom & Baby Care</p>
+        </div>
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/catalog/category/eye_1.png" alt="">
+            <p>Eyes</p>
+        </div>
+        <div>
+            <img src="https://www.beautybebo.com/pub/media/catalog/category/fragrance_3.png" alt="">
+            <p>Fragrance</p>
+        </div>
+    </div>
+    <div id="sixth">
+        <div id="products">
+            <div>
+                <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/7/277cf77missc00000081_1.jpg" alt="">
+                <h4>Miss Claire Eyelash Glue - Clear Tone</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <h5><p class="fa fa-rupee">350</p> 322.00 <p>8% Off</p></h5>
+                <button class="cart-btn"><img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+            </div>
+            <div>
+                <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/b/5b990e16902395773146_3.jpg" alt="">
+                <h4>Maybelline New York Fir Me primer - Dewy+Smooth</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <h5><p class="fa fa-rupee">549</p> 521.00 <p>5% Off</p></h5>
+                <button class="cart-btn"> <img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+            </div>
+            <div>
+                <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/9/6902395735908_0.jpg" alt="">
+                <h4>L'Oreal Paris Infallible Full Wear Concealer</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <h5><p class="fa fa-rupee">799</p> 735.00 <p>8% Off</p></h5>
+                <button class="cart-btn"><img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+            </div>
+            <div>
+                <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/1/51c18ra5qzs._sl1500_.jpg" alt="">
+                <h4>Faces Canada Ultime Pro Matte Play Eyeliner</h4>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <h5><p class="fa fa-rupee"> 649</p> 604.00 <p>7% Off</p></h5>
+                <button class="cart-btn"><img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div id="seventh">
+        <img src="https://www.beautybebo.com/pub/media/mega-menu/homepage.jpg" alt="">
+    </div>
+    <div id="eight">
+        <div id="best-seller">
+            <h3>BEST SELLER</h3>
+            <div>
+                <div>
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/o/ponds_super_light_gel_oil_free_moisturiser_with_hyaluronic_acid_vitamin_e2.jpg" alt="">
+                </div>
+                <div>
+                    <h4>Ponds Super Light Gel Oil Free Moisturiser With Hyaluronic Acid +</h4>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <h5>299.00</h5>
+                    <button class="cart-btn"> <img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/l/cl-08_strawberry_love-min_2.png" alt="">
+                </div>
+                <div>
+                    <h4>Blue Heaven Candy Matte Lip Color</h4>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <h5>Out of stock</h5>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/s/dsfsdafsdfsd.jpg" alt="">
+                </div>
+                <div>
+                    <h4>Ponds Pimple Clear Face Wash - Pack Of 2</h4>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <h5>498.00</h5>
+                    <h5>Out of stock</h5>
+                </div>
+            </div>
+            </div>
+        <div id="best-seller">
+            <h3>LATEST PRODUCTS</h3>
+            <div>
+                <div>
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/c/4ca14ce8906087779124_7_.jpg" alt="">
+                </div>
+                <div>
+                    <h4>Mamaearth Rice Face Scrub Ffor Glowing Skin With Rice Water & Niacinamide For Glass Skin</h4>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <h5><p class="fa fa-rupee">349</p> 304.00<p>13% Off</p></h5>
+                    <button class="cart-btn"> <img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/r/e/repair_shampoo_650-2_1_1.jpg" alt="">
+                </div>
+                <div>
+                    <h4>Dove Intense Repair Shampoo 650ml</h4>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <h5><p class="fa fa-rupee">500</p> 350.00<p>30% Off</p></h5>
+                    <button class="cart-btn"> <img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8908003416557_1.png" alt="">
+                </div>
+                <div>
+                    <h4>Organic Harvest Cleansing Milk With Essential Oils</h4>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <h5><p class="fa fa-rupee">545</p> 491.00<p>10% Off</p></h5>
+                    <button class="cart-btn"> <img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+                </div>
+            </div>
+            </div>
+        <div id="best-seller">
+            <h3>MOST VIEWED</h3>
+            <div>
+                <div>
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/o/5/o5_1_1.jpg" alt="">
+                </div>
+                <div>
+                    <h4>O3+ Whitening Facial Kit With Brightening 7 Whitening Peel Off Mask</h4>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <h5><p class="fa fa-rupee">510</p> 499.00<p>2% Off</p></h5>
+                    <button class="cart-btn"> <img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/x/z/xzxzxzxzxz.jpeg" alt="">
+                </div>
+                <div>
+                    <h4>Ponds White Beauty Anti Spot Fairness Day Cream SPF 15 PA++</h4>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <h5>240.00</h5>
+                    <button class="cart-btn"> <img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/g/v/gvhjgvyjhv.jpg" alt="">
+                </div>
+                <div>
+                    <h4>Vaseline Body Lotion 400ml + Pond's Moisturising Cold Cream</h4>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <h5>310.00</h5>
+                    <button class="cart-btn"> <img src="https://cdn-icons-png.flaticon.com/512/2169/2169826.png" alt=""> Add to Cart</button>
+                </div>
+            </div>
+            </div>
+    </div>
+    <div id="nine">
+        <img src="https://www.beautybebo.com/pub/media/mega-menu/offer.gif" alt="">
+    </div>
+    <div id="ten">
+        <h1>Welcome To Beauty Products Online Shopping India- Beauty Bebo</h1>
+        <h4>If you are looking for a flawless radiant face outlook for a special occasion, then we have the perfect tips for you. jAs you must already know, the cospicuous flawless outlook you want for your wedding, a date, a dinner party or for a modelling competition is only achieved through makeup.
+            <br>
+            Don't get me wrong, you are naturally beautiful, that's obvious. But everyone else is, so how will you will you ensure that you are different? Read on for hot irresisteble tips before you <span>buy beauty products online!</span><br>
+            <span>Clean Your Face First!</span><br>
+            Before embarking on any makeup, always ensure that your fafce is clea. Need some assistance in absolute cleaning? Visit our range of face wash <span>beauty products online</span> for your best pick. We have made it our duty to carefully selecct the best products for youm so that you don't experience breaks and allergies after use. So now you can be confident that your <span>buy cosmetic online shopping </span>will be worth your time and effort. <br>
+            Wondering then how willj make a choice among the spectrum available? Most of our products are purely natural in ingredient, so you can as well check for your favorite ingredient combination. If not sure, we are still here for you. We can help narrow down your options, together with you. <br>
+            <span>Apply a Moisturizer</span><br>
+            <p>Read More</p>
+        </h4>
+    </div>
+    <footer>
+        <div>
+            <div>
+                <h3>CONTACT INFO</h3>
+                <h5>(+91) 7877061041</h5>
+                <h6>support@beautybebo.com</h6>
+                <h6>sales@beautybebo.com</h6>
+                <h6>Open time: 10:00AM - 7:00PM</h6>
+            </div>
+            <div>
+                <h3>QUICK LINKS</h3>
+                <h5>About us</h5>
+                <h5>Contact Us</h5>
+                <h5>Terms & Conditions</h5>
+                <h5>Privacy Policy</h5>
+                <h5>Retrun and Refund Policy</h5>
+                <h5>Shipping Policy</h5>
+            </div>
+            <div>
+                <h3>CUSTOMER INFO</h3>
+                <h5>My Account</h5>
+                <h5>Track your Order</h5>
+                <h5>Order Returns</h5>
+                <h5>Wishlist</h5>
+                <h5>News & Events</h5>
+                <h5>FAQ</h5>
+            </div>
+            <div>
+                <h3>CATEGORIES</h3>
+                <h5>Makeup</h5>
+                <h5>Skin</h5>
+                <h5>Hair</h5>
+                <h5>Personal Care</h5>
+                <h5>Mom & Baby Care</h5>
+                <h5>Fragrance</h5>
+                <h5>Ayurveda</h5>
+            </div>
+        </div>
+        <div id="payment">
+            <img src="https://www.beautybebo.com/pub/media/wysiwyg/payment.png" alt="">
+            <div>
+                Signup For Newsletter <input type="text" placeholder="Search for Newsletter"> <button id="subs">Subscribe</button>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+<script>
+    let username=document.getElementById("user");
+    let loginLs=JSON.parse(localStorage.getItem("login"));
+    username.innerText=loginLs.name;
+    console.log(username)
+</script>
+</html>
