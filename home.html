@@ -452,7 +452,7 @@
         <img class="fav" src="https://as1.ftcdn.net/v2/jpg/01/32/75/28/1000_F_132752845_zcKLpNxIQU0Zt6EOUFCIllqpZdaM62Jw.jpg" alt="">
         <div id="login-signup">
             <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="">
-            <a href="./login.html"><h4> My Account</h4></a>
+            <a><h4 id="user"></h4></a>
         </div>
     </div>
     <div id="nav">
@@ -825,5 +825,10 @@
         </div>
     </footer>
 </body>
-<script></script>main
+<script>
+    let username=document.getElementById("user");
+    let loginLs=JSON.parse(localStorage.getItem("login"));
+    username.innerText=loginLs.name;
+    console.log(username)
+</script>
 </html>

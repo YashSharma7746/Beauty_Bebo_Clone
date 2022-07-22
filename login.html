@@ -1,0 +1,393 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #head{
+            margin-top: -7px;
+            cursor: pointer;
+        }
+        #shop>img{
+            width: 100%;
+            margin: auto;
+            
+        }
+        #google>img{
+            position: absolute;
+            width: 9.3rem;
+            top: 1rem;
+            right: 4rem;
+        }
+        #med-head{
+            width: 85%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 15px;
+        }
+        #med-head>img:nth-child(1){
+            padding: 10px 0px;
+            height: 4rem;
+            width: 20%;
+            margin-right: 2rem;
+        }
+        #searchBar{
+            margin: auto;
+            border: .7px solid grey;
+            padding: 5px 5px;
+        }
+        #brands{
+            width: 13rem;
+            height: 2rem;
+            padding: 5px 8px;
+            border: none;
+            color: grey;
+        }
+        #searchBar>input{
+            padding: 5px 8px;
+            width: 13rem;
+            border: none;
+        }
+        #login-signup{
+            margin-right: 4rem;
+            margin: auto;
+            display: flex;
+            width: 25%;
+            gap: 15px;
+
+        }
+        #login-signup>a>h4{
+            cursor: pointer;
+            text-decoration: underline white;
+        }
+        #login-signup>img{
+            width: 2rem;
+            height: 2rem;
+            border: .2px solid grey;
+            margin-top: 14px;
+            cursor: pointer;
+        }
+        #login-signup>img:hover{
+            background-color: rgb(182, 34, 123);
+        }
+        .fav{
+            width: 2rem;
+            margin: auto;
+            border: 1.5px solid black;
+            margin-left: 9rem;
+            cursor: pointer;
+        }
+        .fav:hover{
+            background-color: rgb(182, 34, 123);
+        }
+        #nav{
+            background-color: rgb(182, 34, 123);
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            position: sticky;
+            top: 0px;
+            float: top;
+        }
+        #nav>a{
+            display: flex;
+            text-decoration: none;
+            gap: 2rem;
+            width: 100%;
+            margin-left: 6rem;
+        }
+        #cart>img{
+            width: 10%;
+            margin: auto;
+        }
+        
+        #nav>a>button,#cart{
+            background-color: rgb(182, 34, 123);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+        #cart{
+            width: 20%;
+            margin-right: 3rem;
+        }
+        #nav>a>button:hover,#cart:hover{
+            background-color: rgb(180, 167, 167);
+        }
+        h2{
+            width: 85%;
+            margin: auto;
+            margin-top: 15px;
+        }
+        #login{
+            width: 85%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;     
+        }
+        #already,#new{
+            width: 40%;
+            margin-top: 5rem;
+            border: .2px solid rgb(180, 167, 167);
+            padding: 1rem 2rem;
+            padding-bottom: 2rem;
+        }
+        #already>h3,#new>h3{
+            padding-bottom: .5rem;
+            font-weight: lighter;
+            border-bottom: .5px solid rgb(180, 167, 167);            
+        }
+        #already>form>input{
+            margin-bottom: 1rem;
+            margin-top: .30rem;
+            width: 90%;
+            padding: .35rem 0;
+        }
+        #already>form>h4,#new>h4{
+            font-weight: lighter;
+        }
+        #already>form>label>span{
+            color: red;
+        }
+        #already>form>input[type="submit"]{
+            background-color: slategray;
+            color: white;
+            width: 5.5rem;
+            padding: 9px 12px;
+            border: none;
+        }
+        #already>form>input[type="submit"]:hover{
+            background-color: rgb(182, 34, 123);
+            cursor: pointer;
+        }
+        #already>form>h4:last-child{
+            margin-left: 6rem;
+            margin-top: -2px;
+        }
+        #already>form>h4:last-child:hover{
+            color: red;
+            cursor: pointer;
+        }
+        #new>h5{
+            font-weight: lighter;
+        }
+        #new>button{
+            width: 35%;
+            color: white;
+            background-color: slategray;
+            border: none;
+            padding: .5rem .5rem;
+        }
+        #new>button:hover{
+            background-color: rgb(182, 34, 123);
+            cursor: pointer;
+        }
+        footer{
+            background-color: rgb(55, 50, 50);
+            padding: 1.5rem;
+            margin-top: 25px;
+        }
+        footer>div{
+            width: 80%;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+        }
+        footer>div>div{
+            color: rgb(145, 140, 140);
+        }
+        footer>div>div>h6{
+            margin: 0px 0px;
+            font-size: medium;
+        }
+        footer>div>div>h5:hover{
+            cursor: pointer;
+            color: rgb(182, 34, 123);
+        }
+        footer>div>div>h5{
+            font-size: medium;
+            line-height: .5rem;
+        }
+        footer>div>div>h6:last-child{
+            margin: 9px 0px;
+        }
+        footer>div>div>h3{
+            color: white;
+            
+        }
+        #payment{
+            width: 85%;
+            border-top: 1px solid white;
+            padding: 1rem 0rem;
+        }
+        #payment>div{
+            color: white;
+            font-size: 30;
+        }#payment>div>input{
+            border: none;
+            width: 18rem;
+            padding: 1rem .5rem;
+            font-size: 15;
+            margin-left: 15px;
+        }
+        #payment>div>button{
+            padding: 1rem .5rem;
+            background-color: rgb(182, 34, 123);
+            color: white;
+            border: none;
+            width: 8rem;
+            cursor: pointer;
+            font-size: 15;
+            margin-left: -10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <div id="shop">
+            <img src="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg" alt="">
+        </div>
+        <div id="google">
+            <img src="https://www.beautybebo.com/pub/media/bb-app.png" alt="">
+        </div>
+    </div>
+    <div id="med-head">
+        <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="">
+        <div id="searchBar">
+            <select name="" id="brands">
+                <option value="">All Categories</option>
+                <option value="1">Makeup</option>
+                <option value="2">Skin</option>
+                <option value="3">Hair</option>
+                <option value="4">Personal Care</option>
+                <option value="5">Mom & Baby Care</option>
+                <option value="6">Fragrance</option>
+                <option value="7">Ayurveda</option>
+            </select>
+            <span>|</span>
+            <input type="text" id="search" placeholder="Enter Your Search">
+        </div>
+        <img class="fav" src="https://as1.ftcdn.net/v2/jpg/01/32/75/28/1000_F_132752845_zcKLpNxIQU0Zt6EOUFCIllqpZdaM62Jw.jpg" alt="">
+        <div id="login-signup">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="">
+            <a href="./login.html"><h4> My Account</h4></a>
+        </div>
+    </div>
+    <div id="nav">
+        <a href="./brands.html">
+            <button>MAKEUP</button>
+            <button>SKIN</button>
+            <button>HAIR</button>
+            <button>PERSONAL CARE</button>
+            <button>MOM & BABY CARE</button>
+            <button>FRAGRANCE</button>
+            <button>AYURVEDA</button>
+        </a> 
+        <button id="cart"><img src="https://cdn-icons.flaticon.com/png/512/736/premium/736943.png?token=exp=1658319175~hmac=17e2bba34f20039a74c57d855258dda6" alt=""> My Cart <span>- 0.00</span></button>
+    </div>
+    <h2>CUSTOMER LOGIN</h2>
+    <div id="login">
+        <div id="already">
+            <h3>REGISTERED CUSTOMERS</h3>
+            <form>
+                <h4>If you have an account, sign in with your  email address.</h4><br>
+                <label>Email <span>*</span></label><br>
+                <input type="email" id="email"><br>
+                <label>Password <span>*</span></label><br>
+                <input type="password" id="password"><br>
+                <input type="submit" value="SIGN IN">
+                <h4>Forgot Your Password?</h4>
+            </form>
+        </div>
+        <div id="new">
+                <h3>NEW CUSTOMERS</h3>
+                <h5>Creating an account has many benefits: check out faster, keep more than one address, track orders and more.</h5>
+                <button id="create">CREATE AN ACCOUNT</button>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <div>
+                <h3>CONTACT INFO</h3>
+                <h5>(+91) 7877061041</h5>
+                <h6>support@beautybebo.com</h6>
+                <h6>sales@beautybebo.com</h6>
+                <h6>Open time: 10:00AM - 7:00PM</h6>
+            </div>
+            <div>
+                <h3>QUICK LINKS</h3>
+                <h5>About us</h5>
+                <h5>Contact Us</h5>
+                <h5>Terms & Conditions</h5>
+                <h5>Privacy Policy</h5>
+                <h5>Retrun and Refund Policy</h5>
+                <h5>Shipping Policy</h5>
+            </div>
+            <div>
+                <h3>CUSTOMER INFO</h3>
+                <h5>My Account</h5>
+                <h5>Track your Order</h5>
+                <h5>Order Returns</h5>
+                <h5>Wishlist</h5>
+                <h5>News & Events</h5>
+                <h5>FAQ</h5>
+            </div>
+            <div>
+                <h3>CATEGORIES</h3>
+                <h5>Makeup</h5>
+                <h5>Skin</h5>
+                <h5>Hair</h5>
+                <h5>Personal Care</h5>
+                <h5>Mom & Baby Care</h5>
+                <h5>Fragrance</h5>
+                <h5>Ayurveda</h5>
+            </div>
+        </div>
+        <div id="payment">
+            <img src="https://www.beautybebo.com/pub/media/wysiwyg/payment.png" alt="">
+            <div>
+                Signup For Newsletter <input type="text" placeholder="Search for Newsletter"> <button id="subs">Subscribe</button>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+<script>
+    let form=document.querySelector("form");
+    let login=JSON.parse(localStorage.getItem("login")) || [];
+    let signup=JSON.parse(localStorage.getItem("signup")) || [];
+    form.addEventListener("submit",function(){
+        event.preventDefault();
+        let obj={
+            email:form.email.value,
+            password:form.password.value,
+        }
+        if (obj.email==="" || obj.password===""){
+            alert("Please fill all input fields");
+            return;
+        }
+        let loginres=true;
+        signup.forEach(function(ele){
+            if (ele.email===obj.email && ele.password===obj.password){
+                loginres=false;
+                localStorage.setItem("login",JSON.stringify(ele));
+                alert("Loged In Sucessfully");
+                window.location.href="home.html"
+            }
+        })
+        if (loginres==true){
+            alert("Wrong Email or Password");
+        }
+        form.reset();
+    })
+
+    let newuser=document.getElementById("create");
+    newuser.addEventListener("click",function(){
+        window.location.href="signup.html";
+    })
+</script>
+</html>
