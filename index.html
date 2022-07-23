@@ -422,6 +422,55 @@
             font-size: 15;
             margin-left: -10px;
         }
+        .show:hover ul.list-categories,.show2:hover ul.list-categories{
+        max-height: inherit;
+        opacity: 1;
+        }
+        .show>div>ul{
+            width: 85%;
+            position: absolute;
+            left: 7.4rem;
+        }
+        .show2>div>ul{
+            width: 70%;
+            position: absolute;
+            left: 27rem;
+        }
+        ul.list-categories{
+            display: flex;
+            line-height: 1.5rem;
+            text-align: left;
+        }
+        .list-categories{
+        list-style-type: none;
+        padding: 5px;
+        margin-bottom: .5rem;
+        margin-left: -.85rem;
+        background-color: white;
+        max-height: 0px;
+        opacity: 0;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        overflow: hidden;
+        color: black;
+        transition: opacity 300ms ease;
+        position: fixed;
+        z-index: 99;
+        }
+        .show2>div>ul>img{
+            width: 15rem;
+            height: 15rem;
+            margin-left: 5rem;
+        }
+        .list-categories>li>ul{
+            list-style-type: none;
+            padding-bottom: 15px;
+            padding-right: 20px;
+            line-height: 1.8rem;
+        }
+        .list-categories>li>ul>li:hover{
+            cursor: pointer;
+            color: rgb(182, 34, 123);
+        }
     </style>
 </head>
 <body>
@@ -457,23 +506,530 @@
     </div>
     <div id="nav">
         <a href="./brands.html">
-            <button>MAKEUP</button>
-            <button>SKIN</button>
-            <button>HAIR</button>
-            <button>PERSONAL CARE</button>
-            <button>MOM & BABY CARE</button>
-            <button>FRAGRANCE</button>
-            <button>AYURVEDA</button>
+            <button class="show">MAKEUP
+                <div>
+                    <ul class="list-categories"> 
+                      <li>
+                        <ul>
+                            <h3>FACE</h3>
+                            <li>BB Cream</li>
+                            <li>Blush</li>
+                            <li>Bronzer</li>
+                            <li>CC Cream</li>
+                            <li>Contour</li>
+                            <li>Concealer</li>
+                            <li>Compact & Powder</li>
+                            <li>Face Primer</li>
+                            <li>Foundation</li>
+                            <li>Highlighters</li>
+                            <li>Loose Powder</li>
+                            <li>Makeup Kits</li>
+                            <li>Makeup Remover</li>
+                            <li>Setting Spray</li>
+                        </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>EYE</h3>
+                                <li>Contact Lenses</li>
+                                <li>Eye Kit</li>
+                                <li>Eyeliner</li>
+                                <li>Eye Shadow</li>
+                                <li>Eye Primer</li>
+                                <li>Eye-Palettes</li>
+                                <li>Eye Makeup Remover</li>
+                                <li>Eye Brow Enhancers</li>
+                                <li>False Eyelashes</li>
+                                <li>Kajal</li>
+                                <li>Mascara</li>
+                                <li>Under Eye Concealer</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>LIPS</h3>
+                                <li>Lipstick</li>
+                                <li>Liquid Lipstick</li>
+                                <li>Lip Liner</li>
+                                <li>Lip Gloss</li>
+                                <li>Lip Balm</li>
+                                <li>Lip Crayon</li>
+                                <li>Lip Stain</li>
+                                <li>Lip Plumper</li>
+                            </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <h3>NAILS</h3>
+                                    <li>Manicure & Pedicure Kits</li>
+                                    <li>Nail Polish</li>
+                                    <li>Nail Care</li>
+                                    <li>Nail Polish Sets</li>
+                                    <li>Nail Art Kits</li>
+                                    <li>Nail Polish Remover</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <h3>TOOLS BRUSHES</h3>
+                                    <li>Blush Brush</li>
+                                    <li>Eyelash Curlers</li>
+                                    <li>Eye Brush</li>
+                                    <li>Face Brush</li>
+                                    <li>Lip Brush</li>
+                                    <li>Makeup Pouches</li>
+                                    <li>Mirrors</li>
+                                    <li>Songes & Applicators</li>
+                                    <li>Sharpeners</li>
+                                    <li>Tweezers</li>
+                                </ul>
+                            </li>
+                    </ul> 
+                    </div>
+            </button>
+            <button class="show">SKIN
+                <div>
+                    <ul class="list-categories"> 
+                      <li>
+                        <ul>
+                            <h3>EYE CARE</h3>
+                            <li>Dark Circles</li>
+                            <li>Eye Contour Care</li>
+                            <li>Eye Care</li>
+                            <li>Eye Cream</li>
+                            <li>Eye Masks</li>
+                            <li>Eye Serums</li>
+                            <li>Puffiness</li>
+                            <li>Under Eye Creams</li>
+                            <li>Under Eye Wrinkles</li>
+                        </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>FACE CARE</h3>
+                                <li>Anti-Ageing Creams</li>
+                                <li>Bleach Creams</li>
+                                <li>Brightening Cream</li>
+                                <li>Face Wash</li>
+                                <li>Facial Wipes</li>
+                                <li>Face Oil</li>
+                                <li>Face Cleansers</li>
+                                <li>Facial Kits</li>
+                                <li>Face Tools</li>
+                                <li>Moisturizer</li>
+                                <li>Mask & Peels</li>
+                                <li>Serum</li>
+                                <li>Toner & Astringents</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>BODY CARE</h3>
+                                <li>All Cream</li>
+                                <li>Body Moisturizers</li>
+                                <li>Body Toners</li>
+                                <li>Body Sun Care</li>
+                                <li>Brightening Lotion</li>
+                                <li>Dark Circles & Wrinkles</li>
+                                <li>Day Cream</li>
+                                <li>Foot Cream</li>
+                                <li>Hair Remover Cream</li>
+                                <li>Hand Creams</li>
+                                <li>Hands & Feet</li>
+                                <li>Kits & Combos</li>
+                                <li>Night Cream</li>
+                                <li>Neck Creams</li>
+                            </ul>
+                            </li>
+                            <img src="https://www.beautybebo.com/pub/media/mega-menu/SKIN_cATA.jpg" alt="">
+                    </ul> 
+                    </div>
+            </button>
+            <button class="show">HAIR
+                <div>
+                    <ul class="list-categories"> 
+                      <li>
+                        <ul>
+                            <h3>HAIR CARE</h3>
+                            <li>Color Protection</li>
+                            <li>Dandruff</li>
+                            <li>Dry Shampoo</li>
+                            <li>Gels & Waxes</li>
+                            <li>Hair Spray</li>
+                            <li>Hair Color/Dye</li>
+                            <li>Hair Creams & Masks</li>
+                            <li>Hair Styling</li>
+                            <li>Hairfall & Thinning</li>
+                            <li>Straighteners</li>
+                        </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>HAIR LOSS</h3>
+                                <li>Conditioner</li>
+                                <li>Hair Oil</li>
+                                <li>Hair Serum</li>
+                                <li>Hair Growth Solutions</li>
+                                <li>Shampoo</li>
+                            </ul>
+                        </li>
+                        <img src="https://www.beautybebo.com/pub/media/mega-menu/hair_cata.jpg" alt="">
+                    </ul> 
+                    </div>
+            </button>
+            <button class="show">PERSONAL CARE
+                <div>
+                    <ul class="list-categories"> 
+                      <li>
+                        <ul>
+                            <h3>BATH & BODY</h3>
+                            <li>Body Cleansers</li>
+                            <li>Body Massage Oil</li>
+                            <li>Body Wash</li>
+                            <li>Creams</li>
+                            <li>Essential Oils</li>
+                            <li>Foot Cream</li>
+                            <li>Scrubs & Exfoliants</li>
+                            <li>Ubtan & Face Packs</li>
+                        </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>BATHING ACCESSORIES</h3>
+                                <li>Bath Brushes</li>
+                                <li>Loofahs</li>
+                                <li>Shower Caps</li>
+                                <li>Sponges</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>BATH & SHOWER</h3>
+                                <li>Body Soaps</li>
+                                <li>Shower Gel</li>
+                            </ul>
+                            </li>
+                            <img src="https://www.beautybebo.com/pub/media/mega-menu/personal_cata.jpg" alt="">
+                    </ul> 
+                    </div>
+            </button>
+            <button class="show">MOM & BABY CARE
+                <div>
+                    <ul class="list-categories"> 
+                      <li>
+                        <ul>
+                            <h3>BABY CARE</h3>
+                            <li>Bath Time</li>
+                            <li>Diapers</li>
+                            <li>Lotions & Creams</li>
+                            <li>Oils</li>
+                            <li>Powder</li>
+                            <li>Shampoo</li>
+                            <li>Soaps</li>
+                            <li>Sterilizer & Clensers</li>
+                            <li>Rash Cream</li>
+                            <li>Wipes</li>
+                        </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>MOM CARE</h3>
+                                <li>Lotions & Creams</li>
+                                <li>Personal Care</li>
+                            </ul>
+                        </li>
+                        <img src="https://www.beautybebo.com/pub/media/mega-menu/mom_baby_cata.jpg" alt="">
+                    </ul> 
+                    </div>
+            </button>
+            <button class="show">FRAGRANCE
+                <div>
+                    <ul class="list-categories"> 
+                      <li>
+                        <ul>
+                            <li>Perfumes</li>
+                            <li>Deodorants roll ons</li>
+                            <li>Body Mist/Spray</li>
+                        </ul>
+                        </li>
+                    </ul> 
+                    </div>
+            </button>
+            <button class="show">AYURVEDA
+                <div>
+                    <ul class="list-categories"> 
+                      <li>
+                        <ul>
+                            <h3>NATURAL SKIN CARE</h3>
+                            <li>Body Wash</li>
+                            <li>Body Lotion</li>
+                            <li>Cleansers</li>
+                            <li>Cream</li>
+                            <li>Eye Care</li>
+                            <li>Fash Wash</li>
+                            <li>Gel</li>
+                            <li>Lip Care</li>
+                            <li>Mask</li>
+                            <li>Pack</li>
+                            <li>Scrub</li>
+                            <li>Sun Protection</li>
+                        </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>NATURAL HAIR CARE</h3>
+                                <li>Conditioner</li>
+                                <li>Hair Oils</li>
+                                <li>Hair Serum</li>
+                                <li>Hair Gel</li>
+                                <li>Shampoo</li>
+                            </ul>
+                        </li>
+                            <img src="https://www.beautybebo.com/pub/media/mega-menu/ayurveda_cata.jpg" alt="">
+                    </ul> 
+                    </div>
+            </button>
         </a> 
         <button id="cart"><img src="https://cdn-icons.flaticon.com/png/512/736/premium/736943.png?token=exp=1658319175~hmac=17e2bba34f20039a74c57d855258dda6" alt=""> My Cart <span>- 0.00</span></button>
     </div>
     <div id="first">
         <div id="all-cat"><img src="https://t4.ftcdn.net/jpg/03/05/87/61/240_F_305876177_4EzB8UJafxNruTRjfLgc57mb07Qn1cNv.jpg" alt=""> ALL CATEGORIES
-            <div class="cat"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/makeup-small.png" alt=""> Makeup </div>
-            <div class="cat"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/skin-small.png" alt=""> Skin </div>
-            <div class="cat"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/hair-small.png" alt=""> Hair </div>
-            <div class="cat"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/personal-care-small.png" alt=""> Personal Care </div>
-            <div class="cat"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/mom-baby-care-small.png" alt=""> Mom & Baby Care </div>
+            <div class="cat show2"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/makeup-small.png" alt=""> Makeup 
+                <div>
+                    <ul class="list-categories"> 
+                      <li>
+                        <ul>
+                            <h3>FACE</h3>
+                            <li>BB Cream</li>
+                            <li>Blush</li>
+                            <li>Bronzer</li>
+                            <li>CC Cream</li>
+                            <li>Contour</li>
+                            <li>Concealer</li>
+                            <li>Compact & Powder</li>
+                            <li>Face Primer</li>
+                            <li>Foundation</li>
+                            <li>Highlighters</li>
+                            <li>Loose Powder</li>
+                            <li>Makeup Kits</li>
+                            <li>Makeup Remover</li>
+                            <li>Setting Spray</li>
+                        </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>EYE</h3>
+                                <li>Contact Lenses</li>
+                                <li>Eye Kit</li>
+                                <li>Eyeliner</li>
+                                <li>Eye Shadow</li>
+                                <li>Eye Primer</li>
+                                <li>Eye-Palettes</li>
+                                <li>Eye Makeup Remover</li>
+                                <li>Eye Brow Enhancers</li>
+                                <li>False Eyelashes</li>
+                                <li>Kajal</li>
+                                <li>Mascara</li>
+                                <li>Under Eye Concealer</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>LIPS</h3>
+                                <li>Lipstick</li>
+                                <li>Liquid Lipstick</li>
+                                <li>Lip Liner</li>
+                                <li>Lip Gloss</li>
+                                <li>Lip Balm</li>
+                                <li>Lip Crayon</li>
+                                <li>Lip Stain</li>
+                                <li>Lip Plumper</li>
+                            </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <h3>NAILS</h3>
+                                    <li>Manicure & Pedicure Kits</li>
+                                    <li>Nail Polish</li>
+                                    <li>Nail Care</li>
+                                    <li>Nail Polish Sets</li>
+                                    <li>Nail Art Kits</li>
+                                    <li>Nail Polish Remover</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <h3>TOOLS BRUSHES</h3>
+                                    <li>Blush Brush</li>
+                                    <li>Eyelash Curlers</li>
+                                    <li>Eye Brush</li>
+                                    <li>Face Brush</li>
+                                    <li>Lip Brush</li>
+                                    <li>Makeup Pouches</li>
+                                    <li>Mirrors</li>
+                                    <li>Songes & Applicators</li>
+                                    <li>Sharpeners</li>
+                                    <li>Tweezers</li>
+                                </ul>
+                            </li>
+                    </ul> 
+                    </div>
+            </div>
+            <div class="cat show2"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/skin-small.png" alt=""> Skin 
+                <div>
+                    <ul class="list-categories"> 
+                      <li>
+                        <ul>
+                            <h3>EYE CARE</h3>
+                            <li>Dark Circles</li>
+                            <li>Eye Contour Care</li>
+                            <li>Eye Care</li>
+                            <li>Eye Cream</li>
+                            <li>Eye Masks</li>
+                            <li>Eye Serums</li>
+                            <li>Puffiness</li>
+                            <li>Under Eye Creams</li>
+                            <li>Under Eye Wrinkles</li>
+                        </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>FACE CARE</h3>
+                                <li>Anti-Ageing Creams</li>
+                                <li>Bleach Creams</li>
+                                <li>Brightening Cream</li>
+                                <li>Face Wash</li>
+                                <li>Facial Wipes</li>
+                                <li>Face Oil</li>
+                                <li>Face Cleansers</li>
+                                <li>Facial Kits</li>
+                                <li>Face Tools</li>
+                                <li>Moisturizer</li>
+                                <li>Mask & Peels</li>
+                                <li>Serum</li>
+                                <li>Toner & Astringents</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>BODY CARE</h3>
+                                <li>All Cream</li>
+                                <li>Body Moisturizers</li>
+                                <li>Body Toners</li>
+                                <li>Body Sun Care</li>
+                                <li>Brightening Lotion</li>
+                                <li>Dark Circles & Wrinkles</li>
+                                <li>Day Cream</li>
+                                <li>Foot Cream</li>
+                                <li>Hair Remover Cream</li>
+                                <li>Hand Creams</li>
+                                <li>Hands & Feet</li>
+                                <li>Kits & Combos</li>
+                                <li>Night Cream</li>
+                                <li>Neck Creams</li>
+                            </ul>
+                            </li>
+                            <img src="https://www.beautybebo.com/pub/media/mega-menu/imgpsh_fullsize_anim.png" alt="">
+                    </ul> 
+                    </div>
+            </div>
+            <div class="cat show2"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/hair-small.png" alt=""> Hair 
+                <div>
+                    <ul class="list-categories"> 
+                      <li>
+                        <ul>
+                            <h3>HAIR CARE</h3>
+                            <li>Color Protection</li>
+                            <li>Dandruff</li>
+                            <li>Dry Shampoo</li>
+                            <li>Gels & Waxes</li>
+                            <li>Hair Spray</li>
+                            <li>Hair Color/Dye</li>
+                            <li>Hair Creams & Masks</li>
+                            <li>Hair Styling</li>
+                            <li>Hairfall & Thinning</li>
+                            <li>Straighteners</li>
+                        </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>HAIR LOSS</h3>
+                                <li>Conditioner</li>
+                                <li>Hair Oil</li>
+                                <li>Hair Serum</li>
+                                <li>Hair Growth Solutions</li>
+                                <li>Shampoo</li>
+                            </ul>
+                        </li>
+                        <img src="https://www.beautybebo.com/pub/media/mega-menu/hair.png" alt="">
+                    </ul> 
+                    </div>
+            </div>
+            <div class="cat show2"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/personal-care-small.png" alt=""> Personal Care 
+                <div>
+                    <ul class="list-categories"> 
+                      <li>
+                        <ul>
+                            <h3>BATH & BODY</h3>
+                            <li>Body Cleansers</li>
+                            <li>Body Massage Oil</li>
+                            <li>Body Wash</li>
+                            <li>Creams</li>
+                            <li>Essential Oils</li>
+                            <li>Foot Cream</li>
+                            <li>Scrubs & Exfoliants</li>
+                            <li>Ubtan & Face Packs</li>
+                        </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>BATHING ACCESSORIES</h3>
+                                <li>Bath Brushes</li>
+                                <li>Loofahs</li>
+                                <li>Shower Caps</li>
+                                <li>Sponges</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>BATH & SHOWER</h3>
+                                <li>Body Soaps</li>
+                                <li>Shower Gel</li>
+                            </ul>
+                            </li>
+                            <img src="https://www.beautybebo.com/pub/media/sm/makeup.png" alt="">
+                    </ul> 
+                    </div>
+            </div>
+            <div class="cat show2"><img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/mom-baby-care-small.png" alt=""> Mom & Baby Care 
+                <div>
+                    <ul class="list-categories"> 
+                      <li>
+                        <ul>
+                            <h3>BABY CARE</h3>
+                            <li>Bath Time</li>
+                            <li>Diapers</li>
+                            <li>Lotions & Creams</li>
+                            <li>Oils</li>
+                            <li>Powder</li>
+                            <li>Shampoo</li>
+                            <li>Soaps</li>
+                            <li>Sterilizer & Clensers</li>
+                            <li>Rash Cream</li>
+                            <li>Wipes</li>
+                        </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h3>MOM CARE</h3>
+                                <li>Lotions & Creams</li>
+                                <li>Personal Care</li>
+                            </ul>
+                        </li>
+                        <img src="https://www.beautybebo.com/pub/media/mega-menu/baby_care.png" alt="">
+                    </ul> 
+                    </div>
+            </div>
             <div class="cat"><img src="https://www.beautybebo.com/pub/media/fragrance.png" alt=""> Fragrance </div>
             <div class="cat"><img src="https://www.beautybebo.com/pub/media/ayurveda.png" alt=""> Ayurveda </div>
         </div>
